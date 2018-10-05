@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Technical Documentation</title>
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Indie+Flower|Luckiest+Guy|Permanent+Marker"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav id="navbar">
+            <header>Momma's Guide To JavaScript</header>
+            <ul>
+                <li><a href="#what_is_javascript" class="nav-link">What is JavaScript</a></li>
+                <li><a href="#get_started" class="nav-link">Get Started</a></li>
+                <li><a href="#comments" class="nav-link">Comments</a></li>
+                <li><a href="#data_types" class="nav-link">Data Types</a></li>
+                <li><a href="#variables" class="nav-link">Variables</a></li>
+                <li><a href="#constants" class="nav-link">Constants</a></li>
+                <li><a href="#math_&_operators" class="nav-link">Math & Operators</a></li>
+                <li><a href="#strings" class="nav-link">Strings</a></li>
+                <li><a href="#comparison_operators" class="nav-link">Comparison Operators</a></li>
+                <li><a href="#logical_operators" class="nav-link">Logical Operators</a></li>
+                <li><a href="#arrays" class="nav-link">Arrays</a></li>
+                <li><a href="#conditionals" class="nav-link">Conditionals</a></li>
+                <li><a href="#loops" class="nav-link">Loops</a></li>
+                <li><a href="#functions" class="nav-link">Functions</a></li>
+                <li><a href="#objects" class="nav-link">Objects</a></li>
+                <li><a href="#references" class="nav-link">References</a></li>
+            </ul>
+        </nav>
+        <main id="main-doc">
+            <section class="main-section" id="what_is_javascript">
+                <header><span class="fas fa-question"></span>What is JavaScript</header>
+                <article>
+                    <p>What is JavaScript? A programming language.</p>
+
+                    <p>Computers are everywhere we look, without people telling computers what to do they are really dumb. </p>
+
+                    <p>How do people tell computers what to do? People give the computer a set of instructions by
+                        writing a computer program using a language that the computer understands: a programming
+                        language.</p>
+                    
+                    <p>JavaScript is a programming language that is used to program web pages. Web pages themselves contain many building blocks.</p>
+                         <ol>
+                             <li><strong>HTML</strong> contains the content of the page.</li>
+                             <li><strong>CSS</strong> is responsible for how a web page looks.</li> 
+                             <li><strong>JavaScript</strong> controls the behavior of a webpage.  JavaScript can also control how a web page looks and provide interactivity by responding to mouse clicks.</li>
+                         </ol>
+
+                </article>
+            </section>
+            <section class="main-section" id="get_started">
+                    <header><span class="fas fa-play-circle"></span>Get Started</header>
+                    <article>
+                        <p>The first thing you need is a place to write your code.  These are called code editors.  A code editor can be as simple as Notepad on a Windows computer or
+                            a complete development environment like Visual Studio.  For these examples I am going to show you an online code editor that only
+                            requires a web browser.
+                        </p>
+                        
+                        <ul>
+                            <li>Click on the link to go to <a href="http://jsbin.com/?html,js,console,output" target="_blank">jsbin.com</a></li>
+                            <li>There should be four areas displayed:  HTML, JavaScript, Console, Output.  HTML is where all the HTML code should be entered.
+                                JavaScript is where the JavaScript code will be entered.  Console is used when testing your code.  Output is what the webpage will look like.
+                                For exercises we will not be working with the HTML section for now.
+                            </li>
+                            <li>Next to the button <button>Run with JS</button> is a checkbox AutoRun JS.  Make sure that is unchecked.  Otherwise you might see some 
+                                errors while you are still typing your code.
+                            </li>
+                            <li>Enter the code below in the JavaScript section and click on <button>Run with JS</button></li>
+                            <li>Because we are using console.log in the code snippet below you will see the results in the Console section.  Console.log is a special
+                                function used by JavaScript to output messages to the console that will not be seen on the web page.  This is used for testing
+                                the code. 
+                            </li>
+                        </ul>
+                        <div class="code-section">
+                                <div class="code-header"><span class="fas fa-code"></span>Code</div>
+                                <div class="code-block">
+                                    <code>console.log("Hello World");</code>
+                                </div>
+                            </div>
+
+                    </article>
+                </section>
+                <section class="main-section" id="comments">
+                        <header><span class="far fa-comment-alt"></span>Comments</header>
+                        <article>
+                           <p>Comments are notes within the code made by the programmer.  Anything within the commented section 
+                               is ignored by the browser.  Programmers use comments to explain what sections of code are doing.  It makes 
+                               it easier for other programmers to read and follow what the code is supposed to be doing.  It also
+                               helps a programmer when they go back later to make changes to the code.  See below how to add a comment to your code.  
+                               Single line comments are good for adding a comment within the code.  Multiple line comments are good 
+                               for commenting out lines of code while testing.
+                           </p>
+                            <div class="code-section">
+                                <div class="code-header"><span class="fas fa-code"></span>Code</div>
+                                <div class="code-block">
+<code>// This is a single line comment 
+/* This is a 
+multiple line comment. */</code>
+                                </div>
+                            </div>
+                           
+                        </article>
+                    </section>
+                    <section class="main-section" id="data_types">
+                            <header><span class="fas fa-table"></span>Data Types</header>
+                            <article>
+                                <p>In computer programs, <strong>data</strong> is the information we store and manipulate in a program.  A <strong>data type</strong>
+                                a category that data belongs to.  There are three basic data types in JavaScript.  Copy & paste the code snippet below into the JavaScript panel 
+                                and run the code to see what happens.
+                                </p>
+                                <ul>
+                                    <li><strong>Numbers</strong> - represents numbers that are stored in the program like your age or weight.  Numbers can be used to 
+                                        perform calculations within the program.</li>
+                                    <li><strong>Strings</strong> - are letters or numbers that are put together to create string of characters such as your name or a sentence.
+                                    Strings are defined in JavaScript enclosed in quotes.  You can use double quotes (") or single quotes (') to define a string, but make sure the opening
+                                    quote marks match the closing quote marks. Strings can not be used to perform calculations in a program.
+                                    </li>
+                                    <li><strong>Booleans</strong> - represents a true or false value.</li>
+                                </ul>
+                                
+                                <div class="code-section">
+                                    <div class="code-header"><span class="fas fa-code"></span>Code</div>
+                                    <div class="code-block">
+                                        <code>console.log(10);
+console.log("This is a string");
+console.log('This is also a string');
+console.log(true);
+                                        </code>
+                                    </div>
+                                </div>
+                               
+                            </article>
+                        </section>
+                        <section class="main-section" id="variables">
+                                <header><span class="fas fa-save"></span>Variables</header>
+                                <article>
+                                    <h3>What are variables</h3>
+                                    <p>In a computer program, we assign values or data to a <strong>variable</strong>.    We assign
+                                    a name to the value so we can access it later in our program.  Variables are called variables because they can "vary" or change.  At any point in your program, you 
+                                    can change the value of a variable.  </p>
+                                    <h3>Defining Variables</h3>
+                                   <p>In JavaScript we create a new variable
+                                by using the keyword <strong>var</strong>. You have to be careful when naming your variables.  You can name your variable whatever you want, but there are a few best practices 
+                                to remember when naming variables.</p>
+                                <ul>
+                                    <li>Simple and descriptive name.</li>
+                                    <li>You cannot use JavaScript keywords for variable names or start your variable name with a number.</li>
+                                    <li>Use <em>camel case</em> - It is common practice when naming
+                                            a variable to start your variable name with a lowercase letter.  If your variable contains multiple words in the name then 
+                                        each word is capitalized except for the first word. This is called <em>camel case</em> because it looks like the humps of a camel.</li>
+                                    <li>JavaScript is case sensitive so  when you access
+                                            your variable later on in your program, you have to make sure it is spelled correctly and the capitalization matches
+                                            exactly.  The variable firstName is not the same as FirstName. </li>
+                                </ul>
+                           
+                            <p>When we first define a variable is contains no value and is 
+                                    considered undefined.  We assign a value to a variable using an assignment operator.  In JavaScript the 
+                                    assignment operator is an equal sign (=).  You can assign a variable a value when you first create the variable
+                                    or later on in the code.  It is very important to remember, that you must define a variable before you can use it.  
+                                    </p>
+                            <p>
+                            </p>
+
+                            <div class="code-section">
+                                    <div class="code-header"><span class="fas fa-code"></span>Code</div>
+                                    <div class="code-block">
+                                        <code>
+// Define the variable firstName but the value is currently undefined
+var firstName; 
+console.log(firstName);
+
+// Assign a string value to the variable firstName
+firstName = "John";      
+console.log(firstName);
+
+// Define a variable named lastName and assigning a string value to it
+var lastName = "Smith";     
+
+// Define a variable named age and assigning a number value to it
+var age = 10;     
+
+// Define a variable named inSchool and assigning a boolean value to it
+var inSchool = true;     
+
+console.log(lastName);
+console.log(age);
+console.log(inSchool);
+
+// Change the value of age 
+age = 11;
+console.log(age);
+
+                                        </code>
+                                    </div>
+                                </div>
+
+                                </article>
+                            </section>
+                            <section class="main-section" id="constants">
+                                    <header><span class="fas fa-save"></span>Constants</header>
+                                    <article>
+                                        <p>Constants are similar to variables, with one important difference.  Constants cannot be changed.  Their value is 
+                                            constant within the code.  If you try to change the value of a constant within the code it will throw an error.
+                                        </p>
+                                        <div class="code-section">
+                                            <div class="code-header"><span class="fas fa-code"></span>Code</div>
+                                            <div class="code-block">
+                                                <code>const programName = "My Program";</code>
+                                            </div>
+                                        </div>
+                                      
+                                    </article>
+                                </section>
+                    <section class="main-section" id="math_&_operators">
+                            <header><span class="fas fa-calculator"></span>Math & Operators</header>
+                            <article>
+
+                                <p>JavaScript can perform mathematical operators like addition, subtraction, multiplication and division on numbers.  JavaScript
+                                    uses special symbols called operators to represent mathematical equations.  Copy & paste the code snippet below into the JavaScript panel 
+                                    and run the code to see what happens.
+                                </p>
+                                <ul>
+                                    <li>Addition:  + </li>
+                                    <li>Subtraction:  - </li>
+                                    <li>Multiplication:  * </li>
+                                    <li>Division:  /</li>
+                                    <li>Modulus: % - Returns the remainder from dividing two numbers.</li>
+                                </ul>
+
+                                <div class="code-section">
+                                    <div class="code-header"><span class="fas fa-code"></span>Code</div>
+                                    <div class="code-block">
+                                        <code>
+console.log(5 + 10);
+console.log(323 - 23);
+console.log(3323 * 32);
+console.log(10 / 2);
+console.log(9 % 2);   //Will return the remainder
+
+                                        </code>
+                                    </div>
+                                </div>
+                                <h3>Order of Operations</h3>
+                                <p>You can perform more complicated calculations in JavaScript as well.  JavaScript follows the same rules 
+                                    about <strong>order of operations</strong> as you follow in math.  Multiplication and division are always
+                                    done first and then addition and subtraction.  In JavaScript, like in math, you can put a parenthesis around
+                                    parts of an equation to force the computer to perform the operations first.  Copy & paste the code snippet below into the JavaScript panel 
+                                    and run the code to see what happens.
+                                </p>
+                                <div class="code-section">
+                                        <div class="code-header"><span class="fas fa-code"></span>Code</div>
+                                        <div class="code-block">
+                                            <code>console.log(322 + 32 * 15 - 10 / 4);
+console.log( (322 + 32) * (15 - 10) / 4 );
+                                            </code>
+                                        </div>
+                                    </div>
+                                    <h3>Using Variables</h3>
+                                    <p>You can perform mathematical calculations on variables and use the results to create a new variable.</p>
+                                    <div class="code-section">
+                                            <div class="code-header"><span class="fas fa-code"></span>Code</div>
+                                            <div class="code-block">
+                                                <code>var birthYear = 2011;
+var currentYear = 2018;
+var age = currentYear - birthYear;
+console.log(age);
+                                                </code>
+                                            </div>
+                                        </div>
+                                        <h3>Incrementing and Decrementing</h3>
+                                        <p>A very common task you will need to do while building a program is to increase or decrease a variable by 1.  This is called <strong>incrementing</strong> (adding)
+                                        or <strong>decrementing</strong> (subtracting) a variable.  JavaScript has operators to make this task easier.
+                                        </p>
+                                        <ul>
+                                            <li>++</li>
+                                            <li>--</li>
+                                        </ul>
+                                        
+                                        <div class="code-section">
+                                                <div class="code-header"><span class="fas fa-code"></span>Code</div>
+                                                <div class="code-block">
+                                                    <code>var counter = 0;
+counter++;      // same as counter = counter + 1;
+console.log(counter);
+counter--;      // same as counter = counter - 1;
+console.log(counter);
+                                                    </code>
+                                                </div>
+                                            </div>
+                                            <h3>Assignment Operators</h3>
+                                            <p>When we learned about variables, we discussed that that the equals sign (=) is an 
+                                                assignment operator.  There are other assignment operators in JavaScript that perform mathematical
+                                                calculations at the same as assigning a value to a variable.
+                                            </p>
+                                            <ul>
+                                                <li>+=</li>
+                                                <li>-=</li>
+                                                <li>*=</li>
+                                                <li>/=</li>
+                                            </ul>
+                                            <div class="code-section">
+                                                    <div class="code-header"><span class="fas fa-code"></span>Code</div>
+                                                    <div class="code-block">
+                                                        <code>var number = 20;
+x += 5;     // same as x = x + 5;
+x -= 5;     // same as x = x - 5;
+x *= 2;     // same as x = x * 2;
+x /= 2;     // same as x = x / 2;
+                                                        </code>
+                                                    </div>
+                                                </div>
+                                                <h3>Math Methods</h3>
+                                                <p>When we learned about variables, we discussed that that the equals sign (=) is an 
+                                                    assignment operator.  There are other assignment operators in JavaScript that perform mathematical
+                                                    calculations at the same as assigning a value to a variable.
+                                                </p>
+                                                <table class="section-table">
+                                                        <thead>
+                                                            <tr>
+                                                        <th>Method</td>
+                                                        <th>Example</th>
+                                                        <th>Description</td>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        <tr>
+                                                            <td>Random</td>
+                                                            <td>Math.random()</td>
+                                                            <td>Generates a random decimal number between 0 and not quite up to 1.</td>
+                                                        </tr>
+                                                        <tr>
+                                                                <td>Floor</td>
+                                                                <td>Math.floor()</td>
+                                                                <td>Round the number down to the nearest whole number</td>
+                                                            </tr>
+                                                            <tr>
+                                                                    <td>Parse.Int</td>
+                                                                    <td>parseInt()</td>
+                                                                    <td>Used to convert strings into integers.  If the first character
+                                                                        in the string is not a number then it returns NaN.  It takes a second argument for the radix, 
+                                                                        which specifies the base of the number in the string. The radix can be an integer between 2 and 36
+                                                                    </td>
+                                                                </tr>
+                                                    </tbody>
+                                                    </table>
+                                                <div class="code-section">
+                                                        <div class="code-header"><span class="fas fa-code"></span>Code</div>
+                                                        <div class="code-block">
+                                                            <code>//Generate a random decimal
+var randomDecimal;
+randomDecimal = Math.random();
+console.log(randomDecimal);
+
+//Round to nearest whole number
+var pi;
+pi = 3.14;
+var piRounded = Math.floor(pi);
+console.log(piRounded);
+
+//Generate random whole number between 0 and 19
+var randomWholeNumber;
+randomWholeNumber = Math.floor(Math.random() * 20);
+
+//Generate random whole between a range of min and max
+var min = 10;
+var max = 200;
+var randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+
+//Convert string into integers
+var numberString = "007";
+var numberValue = parseInt(numberString);
+console.log(numberString);
+console.log(numberValue);
+
+//Will convert binary string to an integer
+console.log(parseInt("11", 2));
+                                                            </code>
+                                                        </div>
+                                                    </div>
+                                </article>
+                        </section>
+                        <section class="main-section" id="strings">
+                            <header><span class="fas fa-quote-left"></span>Strings</header>
+                            <article>
+                                <p>As mentioned earlier, strings are a collection of <strong>characters</strong> enclosed in quote marks in JavaScripts.  Characters include numbers,
+                                    letters, punctuation and spaces.  You can enclose a string inside single quotes or double quotes, but the beginning and ending quotes marks must match.  Please note:  If you
+                                    need to include quote marks inside a string, make sure to use double quotes for the starting and ending quotes and single quotes inside the string.
+                                </p>
+                                <div class="code-section">
+                                    <div class="code-header"><span class="fas fa-code"></span>Code</div>
+                                    <div class="code-block">
+                                        <code>var greeting = "Hello World!";
+var anotherGreeting = 'How are you doing?';
+var numberString = "10";
+var quote1 = "Somebody once said, 'When the going gets tough, the tough gets going'";
+console.log(greeting);
+console.log(anotherGreeting);
+console.log(numberString);
+console.log(quote1);</code>
+                                    </div>
+                                </div>
+                                <h3>Joining Strings</h3>
+                                <p>You can use the plus (+) operator on strings.  In the case of strings,
+                                    the plus (+) operator will concatenates or join two strings together.
+                                </p>
+                                <div class="code-section">
+                                        <div class="code-header"><span class="fas fa-code"></span>Code</div>
+                                        <div class="code-block">
+                                            <code>var greeting = "Hello World! ";
+var anotherGreeting = 'How are you doing?';
+var message = greeting + anotherGreeting;
+console.log(message);</code>
+                                        </div>
+                                    </div>
+                                    <h3>Template Literals</h3>
+                                    <p> With template literals, you can also join strings together with constants or variables.
+                                        You can embed constants and variables by including ${variableName} in the a string within backtick (`) marks.  Using
+                                        template literals allow you to include multiple variable/constants within a string.
+                                    </p>
+                                    <div class="code-section">
+                                            <div class="code-header"><span class="fas fa-code"></span>Code</div>
+                                            <div class="code-block">
+                                                    <code>var myName = "John Doe";
+console.log(`Hello ${myName}, how are you doing today?`);
+</code>
+                                            </div>
+                                    
+                                    <h3>String Methods</h3>
+                                    <p>While creating a new string out of two strings can be fun, there are many other things you can do with
+                                        a string.  Strings have built in methods that can be very useful.
+                                    </p>
+                                    <ul>
+                                        <li><strong>Get a single character from a string</strong> - to get a certain character from 
+                                        a string we use square braces [] with the index or position of that character.  In JavaScript, the 
+                                        index starts counting from zero, so the first character in the string would have index = 0.  For example, stringName[1] 
+                                        will return the second character in the string.
+                                        </li>
+
+                                    </ul>
+                                    <table class="section-table">
+                                            <thead>
+                                                <tr>
+                                            <th>Method</td>
+                                            <th>Example</th>
+                                            <th>Description</td>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>Length</td>
+                                                <td>stringName.length</td>
+                                                <td>Returns the number of characters in a string.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Slice</td>
+                                                <td>stringName.slice(1, 5)</td>
+                                                <td> If you need to cut out a part of a string you can use slice.
+                                                        The first number in the parentheses is the index of the starting character and the second number is the index of the character
+                                                        after the last character that is going to get cut out.</td>
+                                            </tr>
+                                            <tr>
+                                                    <td>IndexOf</td>
+                                                    <td>stringName.indexOf("word")</td>
+                                                    <td>Returns the index of the first occurrence of the given string within the string. 
+                                                            Returns -1 if the string is not found.
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>LastIndexOf</td>
+                                                        <td>stringName.lastIndexOf("word")</td>
+                                                        <td>Returns the index of the last occurrence of the given string within the string.
+                                                            Returns -1 if the string is not found.
+                                                        </td>
+                                                    </tr>
+                                            <tr>
+                                                <td>Uppercase</td>
+                                                <td>stringName.toUpperCase()</td>
+                                                <td>This method is used to convert all the characters in a 
+                                                        string to uppercase characters.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Lowercase</td>
+                                                <td>stringName.toLowerCase()</td>
+                                                <td>This method is used to convert all the characters in a 
+                                                        string to lowercase characters.</td>
+                                            </tr>
+                                        </tbody>
+                                        </table>
+                                    <div class="code-section">
+                                            <div class="code-header"><span class="fas fa-code"></span>Code</div>
+                                            <div class="code-block">
+                                                <code>var longString = "This is a very long string.  Do you know how many characters are in this string. This is the end.";
+console.log( longString.length );
+console.log( longString[0] );
+console.log( longString.slice(0, 4) );  // Should return characters at index 0 to index 3
+console.log( longString.indexOf("This") );
+console.log( longString.lastIndexOf("This") );
+console.log( longString.toUpperCase() );
+console.log( longString.toLowerCase() );
+                                                </code>
+                                            </div>
+                                        </div>
+
+                            </article>
+                        </section>
+                        <section class="main-section" id="comparison_operators">
+                                <header><span class="fas fa-equals"></span>Comparison Operators</header>
+                                <article>
+                                    <p>Comparison operators are used to test for either true or false.  <em>Please note:  The single equal sign (=) is an assignment
+                                        operator.  Do not use a single = sign when comparing if two values are equal.</em>
+                                    </p>
+                                    <table class="section-table">
+                                        <thead>
+                                            <tr>
+                                        <th>Operation</th> 
+                                        <th>Syntax</td>
+                                        <th><span class="fas fa-code"></span>Code</td>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>Equal To</td>
+                                            <td>==</td>
+                                            <td><code>console.log(5 == 5);  // returns true
+console.log(5 == "5");  // returns true
+console.log(5 == 6);    // returns false</code></td>
+                                        </tr>
+                                        <tr><td>Exactly Equal To</td>
+                                            <td>===</td>
+                                            <td><code>console.log(5 === 5);  // returns true
+console.log(5 === "5");  // returns false
+console.log(5 === 6);    // returns false</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Not Equal To</td>
+                                            <td>!=</td>
+                                            <td><code>console.log(5 != 5);  // returns false
+console.log(5 != "5");  // returns false
+console.log(5 != 6);    // returns true</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Not Exactly Equal To</td>
+                                            <td>!==</td>
+                                            <td><code>console.log(5 != 5);  // returns true
+console.log(5 != "5");  // returns true
+console.log(5 != 6);    // returns false</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Greater Than</td>
+                                            <td>&gt;</td>
+                                            <td>
+<code>
+console.log(5 &gt; 6);  // returns false
+console.log(5 &gt; 4);  // returns true
+console.log(5 &gt; 5);  // returns false</code>
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Less Than</td>
+                                            <td>&lt;</td>
+                                            <td>
+<code>
+console.log(5 &lt; 6);  // returns true
+console.log(5 &lt; 6);  // returns false
+console.log(5 &lt; 5);  // returns false
+        </code>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Greater Than Or Equal To</td>
+                                            <td>&gt;=</td>
+                                            <td>
+<code>
+console.log(5 &gt;= 6);  // returns false
+console.log(5 &gt;= 4); // returns true
+console.log(5 &gt;= 5); // returns true  </code></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Less Than or Equal To</td>
+                                            <td>&lt;=</td>
+                                            <td>
+<code>
+console.log(5 &lt;= 6);  // returns true
+console.log(5 &lt;= 6); // returns false
+console.log(5 &lt;= 5);  // returns true 
+</code></td>
+                                        </tr>
+                                    </tbody>
+                                    </table>
+                                    <div class="code-section">
+                                        <div class="code-header"><span class="fas fa-code"></span>Code</div>
+                                        <div class="code-block">
+                                            <code>var numberFive = 5;
+
+console.log(numberFive == 5);
+console.log(numberFive != 6);
+console.log(numberFive &gt; 4);
+console.log(numberFive &gt;= 5);
+console.log(numberFive &lt; 6);
+console.log(numberFive &lt;= 5);
+                                                    
+console.log(numberFive === "5");
+console.log(numberFive !== "5");
+                                            </code>
+                                        </div>
+                                    </div>
+
+                                </article>
+                            </section>
+                            <section class="main-section" id="logical_operators">
+                                    <header><span class="fas fa-check"></span>Logical Operators</header>
+                                    <article>
+                                        <p>Logical operators are a comparison of between two boolean values.  There are three types
+                                            of logical operators in JavaScript:  &&, ||, and !.
+                                        </p>
+                                        <table class="section-table">
+                                                <thead>
+                                                    <tr>
+                                                <th>Operation</th> 
+                                                <th>Syntax</td>
+                                                <th>Description</th>
+                                                <th><span class="fas fa-code"></span>Code</td>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td>And</td>
+                                                    <td>&&</td>
+                                                    <td>Used to compare if two boolean values are true.  Both values must be true to return a true value.  Otherwise the expression will</td>
+                                                    <td><code>// returns true
+console.log(true && true);  
+// returns false
+console.log(true && false);  
+// returns false
+console.log(false && false);  
+        </code></td>
+                                                </tr>
+                                                <tr><td>Or</td>
+                                                    <td>||</td>
+                                                    <td>Used to compare if one of two boolean values are true.  If one of the values are true then the expression returns true.</td>
+                                                    <td><code>// returns true
+console.log(true || true);  
+// returns true
+console.log(true || false);  
+// returns false
+console.log(false || false);    </code></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Not</td>
+                                                    <td>!</td>
+                                                    <td>Used to change the value of a boolean value.  It will change true to false and false to true.</td>
+                                                    <td><code>// returns false
+console.log(!true);  
+// returns true
+console.log(!false);  
+</code></td>
+                                                </tr>
+                                               
+                                            </tbody>
+                                            </table>
+                                        <div class="code-section">
+                                            <div class="code-header"><span class="fas fa-code"></span>Code</div>
+                                            <div class="code-block">
+                                                <code>var isBlue = true;
+var isRed = false;
+console.log(isBlue && isRed);
+console.log(isBlue || isRed);
+console.log(!isBlue);
+                                                </code>
+                                            </div>
+                                        </div>
+
+                                    </article>
+                                </section>
+                                <section class="main-section" id="arrays">
+                                        <header><span class="fas fa-table"></span>Arrays</header>
+                                        <article>
+                                            <p>Arrays are used to store multiple 
+                                                values under a single variable name.  Arrays are defined by listing the values of the array between square braces [].
+                                                You can access the value inside the array by referencing the index number of the value. 
+                                            </p>
+                                            <div class="code-section">
+                                                <div class="code-header"><span class="fas fa-code"></span>Code</div>
+                                                <div class="code-block">
+                                                    <code>var ingredients = ["milk", "eggs", "flour", "sugar"];
+var ages = [9, 10, 7, 18, 25];
+var misc = ["red", 10, true];
+console.log(ingredients);
+console.log(ingredients[0]);
+console.log(ages);
+console.log(misc);
+
+                                                    </code>
+                                                </div>
+                                            </div>
+                                            <h3>Array Methods</h3>
+                                            <table class="section-table">
+                                                    <thead>
+                                                        <tr>
+                                                    <th>Operation</th> 
+                                                    <th>Syntax</td>
+                                                    <th>Description</th>
+
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td>Push</td>
+                                                        <td>myArray.pop()</td>
+                                                        <td>Adds data to the end of an array.</td>
+                                                        
+                                                    </tr>
+                                                    <tr><td>Pop</td>
+                                                        <td>myArray.push()</td>
+                                                        <td>Removes data from the end of an array.</td>
+                                                    
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Shift</td>
+                                                        <td>myArray.shift()</td>
+                                                        <td>Removes data from the beginning of an array.</td>
+                                                       
+                                                    </tr>
+                                                    <tr>
+                                                            <td>Unshift</td>
+                                                            <td>myArray.unshift()</td>
+                                                            <td>Add data to the beginning of an array.</td>
+                                                           
+                                                        </tr>
+                                                   
+                                                </tbody>
+                                                </table>
+                                                <div class="code-section">
+                                                        <div class="code-header"><span class="fas fa-code"></span>Code</div>
+                                                        <div class="code-block">
+                                                            <code>var myArray = [1,2,3,4,5];
+myArray.push(4);
+console.log(myArray);
+var lastVal = myArray.pop();
+console.log(myArray);
+console.log(lastVal);
+var firstVal = myArray.shift();
+console.log(myArray);
+console.log(firstVal);
+myArray.unshift(9);
+console.log(myArray);
+                                                            </code>
+                                        </article>
+                                    </section>
+                                    <section class="main-section" id="conditionals">
+                                        <header><span class="fas fa-check"></span>Conditionals</header>
+                                        <article>
+                                            <p>Conditionals are used to make decision within the code and control the flow of the program.
+                                            </p>
+                                            <table class="section-table">
+                                                    <thead>
+                                                        <tr>
+                                                    <th>Conditional</th> 
+                                                    <th>Syntax</td>
+                                          
+
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td>If</td>
+                                                        <td>if (condition is true) {<br>
+                                                            &nbsp;&nbsp;&nbsp;&nbsp;// do something<br>
+                                                        }
+                                                        </td>
+                                                       
+                                                        
+                                                    </tr>
+                                                    <tr><td>If then else</td>
+                                                        <td>if (condition is true) {<br>
+                                                            &nbsp;&nbsp;&nbsp;&nbsp;// do something<br>
+                                                        } else if (anothercondition is true) {<br>
+                                                            &nbsp;&nbsp;&nbsp;&nbsp;// do something else<br>
+                                                        }
+                                                    </td>
+                                                        
+                                                    
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Switch</td>
+                                                        <td>
+                                                            switch (value) { <br>
+                                                            &nbsp;case someValue: <br>
+                                                                &nbsp;&nbsp;&nbsp;&nbsp;//do something <br>
+                                                                &nbsp;&nbsp;&nbsp;&nbsp;break;<br>
+                                                                &nbsp;case otherValue:<br>
+                                                            &nbsp;&nbsp;&nbsp;&nbsp;//do something else<br>
+                                                            &nbsp;&nbsp;&nbsp;&nbsp;break;<br>
+                                                            &nbsp;default: <br>
+                                                            &nbsp;&nbsp;&nbsp;&nbsp;//do something if nothing matches<br>
+                                                            &nbsp;&nbsp;&nbsp;&nbsp;break;<br>
+                                                        }
+                                                        </td>
+                                                        
+                                                       
+                                                    </tr>
+                                                    <tr>
+                                                            <td>Ternary</td>
+                                                            <td>condition ? statement-if-true : statement-if-false;<br><br>
+                                                                // chaining ternary with multiple conditional<br>
+                                                                condition? statement-if-true: other-condition? statement-if-true : statement-if-false;
+                                                            </td>
+                                                           
+                                                            
+                                                        </tr>
+                                                    
+                                                   
+                                                </tbody>
+                                                </table>
+                                            <div class="code-section">
+                                                <div class="code-header"><span class="fas fa-code"></span>Code</div>
+                                                <div class="code-block">
+                                                    <code>var value = 1;
+if (value == 1) {
+    console.log("The value is 1");
+}
+value = 2;
+if (value == 1) {
+    console.log("The value is 1");
+} else  {
+    console.log("The value is not 1");
+}
+
+if (value == 1) {
+    console.log("The value is 1");
+} else if (value == 2) {
+    console.log("The value is 2");
+} else {
+    console.log("The value is not 1 or 2");
+}
+
+switch (value) {
+    case 1:  
+        console.log("The value is 1");
+        break;
+    case 2:
+        console.log("The value is 2");
+        break;
+    case 3:
+    case 4:
+    case 5:
+        console.log("The value is either 3, 4, 5");
+        break;
+    default:
+        console.log("The value is not 1, 2, 3, 4, 5");
+        break;
+}
+
+function checkEqual(a, b) {
+    return a === b ? true : false;
+}
+  
+  checkEqual(1, 2);
+
+  function checkSign(num) {
+    return (num === 0) ? "zero" : (num > 0)? "positive": "negative";
+  }
+  
+  checkSign(10);
+                                                    </code>
+                                                </div>
+                                            </div>
+
+                                        </article>
+                                    </section>
+                                    <section class="main-section" id="loops">
+                                            <header><span class="fas fa-redo"></span>Loops</header>
+                                            <article>
+                                                <p>Loops are used to run sections of code multiple times.  
+                                                </p>
+                                                <table class="section-table">
+                                                        <thead>
+                                                            <tr>
+                                                        <th>Loop</th> 
+                                                        <th>Description</th>
+                                                        <th>Syntax</td>
+                                              
+    
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        <tr>
+                                                            <td>While</td>
+                                                            <td>Will repeat while a condition is true</td>
+                                                            <td>
+                                                                while (condition is true) {<br>
+                                                                &nbsp;&nbsp;&nbsp;&nbsp;// do something<br>
+                                                            }
+                                                            </td>
+                                                           
+                                                            
+                                                        </tr>
+                                                        <tr><td>For</td>
+                                                            <td>Loops for a specified amount of times. The parameters in the for loop are optional.
+                                                                The initialization is executed one time before the loop starts.  This is usually used
+                                                                to define a counter variable.  The condition is evaluated at the beginning of each
+                                                                loop interation.  The final-expression is run at the end of each loop iteration.  The final-expression is 
+                                                                usually used to increment a counter variable.
+                                                            </td>
+                                                            <td>
+                                                                for ([initialization]; [condition]; [final-expression]) {<br>
+                                                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                                                
+                                                            }
+                                                        </td>
+                                                            
+                                                        
+                                                        </tr>
+                                                        
+                                                        <tr>
+                                                                <td>Do While</td>
+                                                                <td>Loop will run once and Will repeat while a condition is true.  </td>
+                                                                <td>
+                                                                     do {<br>
+                                                                    &nbsp;&nbsp;&nbsp;&nbsp;// do something<br>
+                                                                } while (condition is true)
+                                                                </td>
+                                                               
+                                                                
+                                                            </tr>
+                                                    </tbody>
+                                                    </table>
+                                                <div class="code-section">
+                                                    <div class="code-header"><span class="fas fa-code"></span>Code</div>
+                                                    <div class="code-block">
+                                                        <code>var value = 0;
+while (value < 5) {
+    console.log(value);
+    value++;
+}
+                                                            
+for(var i = 0; i < 5; i++) {
+    console.log(i);
+}
+
+var j = 0;
+do {
+    console.log(j);
+    j++;
+} while (j < 5);
+                                                        </code>
+                                                    </div>
+                                                </div>
+                                               
+
+                                            </article>
+                                        </section>
+                                    <section class="main-section" id="functions">
+                                            <header><span class="fas fa-check"></span>Functions</header>
+                                            <article>
+                                                <p>Functions are sections of reusable code that can be called multiple times within your code.  Functions can be provided parameters 
+                                                    which can be used by the function.  Functions also can return a value when the function has completed.
+                                                </p>
+                                                <table class="section-table">
+                                                        <thead>
+                                                            <tr>
+
+                                                        <th>Description</th>
+                                                        <th>Syntax</td>
+                                              
+    
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        <tr>
+                                                            <td>Normal</td>
+                                                          
+                                                            
+                                                            <td>
+                                                                function functionName (parameters) {<br>
+                                                                &nbsp;&nbsp;&nbsp;&nbsp;// do something<br>
+                                                                &nbsp;&nbsp;&nbsp;&nbsp;return value;
+                                                            }
+                                                            </td>
+                                                           
+                                                            
+                                                        </tr>
+                                                        <tr>
+                                                                <td>Assignment</td>
+                                                              
+                                                                
+                                                                <td>
+                                                                    const functionName = function (parameters) {<br>
+                                                                    &nbsp;&nbsp;&nbsp;&nbsp;// do something<br>
+                                                                    &nbsp;&nbsp;&nbsp;&nbsp;return value;
+                                                                }
+                                                                </td>
+                                                               
+                                                                
+                                                            </tr>
+                                                            <tr>
+                                                                    <td>Arrow</td>
+                                                                  
+                                                                    
+                                                                    <td>
+                                                                        const functionName = () => {<br>
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;// do something<br>
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;return value;
+                                                                    }
+                                                                    </td>
+                                                                   
+                                                                    
+                                                                </tr>
+                                                    </tbody>
+                                                    </table>
+                                                <div class="code-section">
+                                                    <div class="code-header"><span class="fas fa-code"></span>Code</div>
+                                                    <div class="code-block">
+                                                        <code>function withOutParameters() {
+    console.log("Hello World!");
+}
+function withParameters(a, b) {
+    console.log("Hello the values are " + a + " and " + b);
+}
+function withReturnValue(a,b) {
+    return a + b;
+}
+withOutParameters();
+withParameters(1, 2);
+console.log("The sum is " + withReturnValue(1, 2));
+
+//Another way to define a function
+const myFunction = function() {
+    return 1;
+}
+                                                        </code>
+                                                    </div>
+                                                </div>
+
+                                            </article>
+                                        </section>
+                                        <section class="main-section" id="objects">
+                                                <header><span class="fas fa-check"></span>Objects</header>
+                                                <article>
+                                                    <p>Objects are used to store data in a structured way.  Like arrays, objects can represent multiple
+                                                        values under a single object.  The data stored in an object is accessed using properties.
+                                                    </p>
+                                                    <h3>Defining Objects</h3>
+                                                    <p>Objects are defined between curly braces {propertyName: propertyValue, 2ndpropertyName: 2ndpropertyValue}.  Property names 
+                                                        can be strings or numbers.  If the property name is a single word without spaces then it can be defined without quote, but 
+                                                        the name has a space then it must be defined with quotes. Each property has to be separated by commas.  Property values
+                                                        can also be arrays or other objects.  You can also create arrays of objects.
+                                                    </p>
+                                                    <h3>Accessing Values in Objects</h3>
+                                                    There are two ways to access the values stored in an object. 
+                                                    <ul>
+                                                        <li><strong>Dot Notation</strong> - you can get the values of an object by using dot notation by using objectName.propertyName.  You can not
+                                                        use dot notation when the property name is more than one word or when access a property by a variable.</li>
+                                                        <li><strong>Bracket Notation</strong> - you can get the values of an object by using bracket notation by putting
+                                                        the property name in the square brackets.  objectName[propertyName]  If the property name has a space, you have to use bracket
+                                                        notation.  You can also use bracket notation if the propertyName is coming from a variable.</li>
+                                                    </ul>
+                                                    <h3>Test if property is defined</h3>
+                                                    <p>There will be cases when a property is not defined for an object.  If your code is attempting to access
+                                                        a property that has not be defined for an object it will return a value undefined.  This could cause
+                                                        errors in your program.  There are two ways to test if a property is defined.
+                                                    </p>
+                                                    <ul>
+                                                        <li><strong>Test for undefined</strong> - before accessing property you can test if (objectName[propertyName] === undefined)</li>
+                                                        <li><strong>.hasOwnProperty</strong> - this is a method available for object to test if a given property exists.  objectName.hasOwnProperty(propertyName) will return
+                                                        true if the property exists for the object. </li>
+                                                    </ul>
+                                                    <div class="code-section">
+                                                        <div class="code-header"><span class="fas fa-code"></span>Code</div>
+                                                        <div class="code-block">
+                                                            <code>//Defining an object
+var person = {
+firstName: "John",
+lastName: "Doe",
+age: 35,
+married: true,
+"favorite foods": ["Pizza","Cheeseburgers", "Pasta"]
+};
+                                                                    
+//Defining an array of objects
+var pets = [
+{petname: "Rover",
+type: "Dog",
+age: 5,
+fetch: true
+},
+{petname: "Fluffy",
+type: "Cat",
+age: 2,
+"favorite thing": "Sleeping"}
+];
+                                                                    
+console.log("Hello, " + person.firstName);
+console.log("My #1 favorite food is " + person["favorite foods"][0]);
+console.log("My oldest pet's name is " + pets[0].petname);
+
+if (pets[0]["favorite thing"] === undefined) {
+    console.log("My dog does not have a favorite things property");
+}
+if (pets[1].hasOwnProperty("favorite thing")) {
+    console.log("My cat's favorite thing to do is " + pets[1]["favorite thing"]);
+}
+
+
+                                                            </code>
+                                                        </div>
+                                                    </div>
+                                                    <ul>
+                                                        <li>Need at least 5 list items</li>
+                                                    </ul>
+                                                </article>
+                                            </section>
+            <section class="main-section" id="references">
+                <header><span class="fas fa-book-open"></span>References</header>
+                <article>
+                    <p>
+                        <cite>JavaScript for Kids</cite> by Nick Morgan
+                    </p>
+                    <p><cite>w3Schools</cite></p>
+                    <p><cite>Progate - </cite><a href="progate.com">Progate.com</a></p>
+                    <p><cite>FreeCodeCampe - </cite><a href="https://www.freecodecamp.org/">Progate.com</a></p>
+                </article>
+            </section>
+           
+
+        </main>
+    </div>
+
+</body>
+
+
+</html>

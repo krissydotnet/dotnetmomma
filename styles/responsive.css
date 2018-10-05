@@ -1,0 +1,76 @@
+
+/* For Tablets */
+@media all and (max-width: 1078px) {
+    .header-logo {
+        font-size: 18px;
+    }
+    .banner-wrapper {
+        height: 150px;
+    }
+    .image-content img {
+        width: 150px;
+    }
+    .text-content h1{
+        font-size: 25px;
+    }
+    .sub-heading {
+        font-size: 14px;
+    }
+    .item-box {
+
+        width: 45%;
+
+    }
+    .tool {
+        width: 50%;
+    }
+    
+}
+  
+/* For Smartphones */
+@media all and (max-width: 670px) {
+    header {
+        height: 20px;
+    }
+    .header-logo {
+        font-size: 12px; 
+    }
+    .menu-icon {
+        display: block;
+        padding-right: 30px;
+
+    }
+    .header-nav {
+        display: none;
+    }
+    .banner-wrapper {
+        padding-top: 40px;
+        height: 75px;
+        text-align: center;
+    }
+
+    .image-content {
+            display: none;
+    }
+    .text-content {
+        padding-left: 10px;
+    }
+    
+    .text-content h1 {
+        font-size: 12px;
+
+    }
+    .sub-heading {
+        font-size: 10px;
+        height: 20px;
+        line-height: 20px;
+    }
+    .item-box {
+        width: 80%;
+        padding-bottom: 15px;
+    }
+    .tool {
+        width: 100%;
+    }
+
+}

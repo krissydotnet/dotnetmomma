@@ -1,0 +1,357 @@
+body {
+    margin: 0;
+    font-family: "Lucida Grande";
+}
+a {
+    text-decoration: none;
+}
+/* header styles */
+.container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1170px;
+}
+header {
+     background-color:#4d4dff;
+     color: #fff;
+     height: 55px;
+     width: 100%;
+     padding: 5px;
+     margin: 0px;
+     opacity: 0.7;
+     position: fixed;
+     top: 0;
+     z-index: 10;
+}
+
+.header-left {
+    float: left;
+
+}
+.header-right {
+    float: right;
+
+}
+.header-logo {
+    font-size: 25px;
+    letter-spacing: 3px;
+    font-family: 'Permanent Marker', cursive;
+    
+}
+.header-nav a {
+    text-decoration: none;
+    color: white;
+}
+.header-nav a:visited {
+    color: white;
+}
+.header-nav li {
+    list-style: none;
+    float: left;
+    padding-right: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    
+}
+.header-nav li:hover {
+    color: #000;
+}
+.menu-icon {
+    float: right;
+    display: none;
+}
+
+
+
+/* main styles */
+
+.banner-wrapper {
+    width: 100%;
+    padding-top: 100px;
+    background-image: url("../images/banner-background.jpg");
+    height: 245px;
+    background-size: cover;
+    text-align: center;
+    opacity: 0.7;
+
+    
+
+}
+
+.text-content {
+    float: left;
+
+}
+
+.image-content {
+    float:left;
+    padding-right: 30px;
+}
+
+.text-content h1{
+    font-size: 40px;
+    letter-spacing: 5px;
+    font-family: 'Luckiest Guy', cursive;
+    color: #000066;
+}
+
+.sub-heading {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 25px;
+    color: black;
+    font-weight: bold;
+    height: 40px;
+    line-height: 40px;
+    opacity: 1;
+}
+
+.image-content img {
+    width: 300px;
+    opacity: 0.8;
+}
+
+/* Menu */
+.menu-wrapper {
+    padding-top: 40px;
+    width: 100%;
+    padding-bottom: 100px;
+    background-color:#e6ffff;
+    height: 500px;
+}
+.menu-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.item-box {
+    display: flex;
+    box-shadow: 3px 3px grey;
+    border-radius: 15%;
+    height: 150px;
+    padding: 10px;
+    color: white;
+    opacity: 0.7;
+    width: 300px;
+    align-items: center;
+    margin: 10px;
+    justify-content: center;
+   
+    
+}
+.menu-items a {
+    display: flex;
+    color: white;
+    text-decoration: none;
+  
+}
+.item-box a:visited {
+    color: white;
+}
+.item-box:hover {
+    opacity: 0.5;
+}
+.item-box:active {
+    position: relative;
+    top: 3px;
+    left: 3px;
+    box-shadow: none;
+}
+.tools {
+  
+    background-color: purple;
+}
+.training {
+
+    background-color: green;
+}
+.kids {
+   
+    background-color: blue;
+}
+
+.item-box .icons {
+    font-size: 45px;
+    align-items: center;
+    padding-right: 20px;
+    
+}
+.item-desc {
+
+    font-size: 30px;
+    font-family: 'Luckiest Guy', cursive;
+    align-items: center;
+   line-height: 45px;
+  
+}
+
+/* page header styles */
+.section-heading {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 25px;
+    color: black;
+    font-weight: bold;
+    height: 40px;
+    line-height: 40px;
+    opacity: 1;
+    margin-top: 50px;
+
+}
+.section-heading .fas {
+    margin-right: 10px;
+}
+.pageheader-wrapper {
+    width: 100%;
+    padding-top: 100px;
+    background-image: url("../images/banner-background.jpg");
+    height: 150px;
+    background-size: cover;
+    text-align: center;
+    opacity: 0.7;
+
+}
+
+.pageheader-wrapper .image-content img {
+    width: 200px;
+    opacity: 0.8;
+}
+/* Blog */
+
+.blog-header {
+    display: flex;
+    margin-top: 50px;
+}
+.blog-picture {
+    flex: 1;
+}
+.blog-picture img {
+    width: 200px;;
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.blog-description {
+    flex: 2;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 25px;
+    margin: auto 0;
+
+}
+.blog-text {
+    font-size: 20px;
+}
+.blog-content {
+    padding-bottom: 50px;
+}
+
+/* Tools */
+.tools-wrapper {
+    padding-bottom: 50px;
+}
+.tools-wrapper p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+}
+.tool-header {
+    padding-top: 50px;
+}
+.tool-header, .links-wrapper h1  {
+    font-size: 20px;
+    font-family: 'Luckiest Guy', cursive;
+    color: #000066;
+}
+.toollist {
+    display: flex;
+    flex-wrap: wrap;
+}
+.tool {
+    vertical-align: top;
+    height: 75px;
+    width: 45%;
+    background-color: #cceeff;
+    font-size: 14px;
+    color: black;
+    font-weight: bold;
+    padding-left: 20px;
+}
+.tool:hover {
+    background-color: #808080;
+}
+.toollist .icons {
+    font-size: 25px;
+    padding-right: 15px;
+}
+.tool img {
+    width: 200px;
+    display:none;
+}
+.tool a {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+}
+.tool a:visited {
+    color: black;
+}
+.tool a:hover {
+    color: white;
+
+}
+.tool item-desc {
+    line-height: 75px;
+}
+/* contact form */
+.contact-wrapper {
+    padding-bottom: 50px;
+}
+
+.form-field {
+    padding: 10px;
+}
+
+/* tooltip */
+/* w3C Schools - https://www.w3schools.com/howto/howto_css_tooltip.asp */
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 80%;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+/* footer styles */
+footer {
+    width: 100%;
+    height: 60px;
+    background-color:#4d4dff;
+}

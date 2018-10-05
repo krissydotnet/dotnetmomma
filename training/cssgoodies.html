@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Technical Documentation</title>
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Indie+Flower|Luckiest+Guy|Permanent+Marker"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/styles.css">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav id="navbar">
+            <header>Momma's Guide To CSS</header>
+            <ul>
+                <li><a href="#what_is_css" class="nav-link">What is CSS</a></li>
+                <li><a href="#external_stylesheet" class="nav-link">External Stylesheet</a></li>
+                <li><a href="#internal_stylesheet" class="nav-link">Internal Stylesheet</a></li>
+            </ul>
+        </nav>
+        <main id="main-doc">
+                <section class="main-section" id="title_of_section">
+                        <header><span class="fas fa-check"></span>What is CSS</header>
+                        <article>
+                            <p>Cascading Stylesheets (or CSS) are what define how a web page looks.
+                            </p>
+
+                        </article>
+                    </section>
+                    <section class="main-section" id="external_stylesheet">
+                            <header><span class="fas fa-check"></span>External Stylesheet</header>
+                            <article>
+                                <p>The best practice is to link to an external stylesheet.  That way you can share stylesheets among multiple
+                                    web pages.  The link tag must appear in the &lt;head&gt; section of the HTML document.
+                                </p>
+                                <div class="code-section">
+                                    <div class="code-header"><span class="fas fa-code"></span>Code</div>
+                                    <div class="code-block">
+                                        <code>&lt;link rel="stylesheet" href="css/my_styles.css"&gt;</code>
+                                    </div>
+                                </div>
+
+                            </article>
+                        </section>
+                        <section class="main-section" id="internal_stylesheet">
+                                <header><span class="fas fa-check"></span>Internal Stylesheet</header>
+                                <article>
+                                    <p>Sometimes it is better to include the stylesheet directly into the webpage it applies to.  This is done by
+                                        putting the css in a &lt;script&gt;.  The &lt;script&gt; tag can be placed anywhere in the document, but it is common practice 
+                                        to put it in the &lt;head&gt; section of the HTML document.
+                                    </p>
+                                    <div class="code-section">
+                                        <div class="code-header"><span class="fas fa-code"></span>Code</div>
+                                        <div class="code-block">
+                                            <code>&lt;script&gt;
+    body {
+        margin: 0 0 0 0;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;                                                  
+    }
+&lt;/script&gt;
+                                            </code>
+                                        </div>
+                                    </div>
+    
+                                </article>
+                            </section>
+            <section class="main-section" id="references">
+                <header><span class="fas fa-book-open"></span>References</header>
+                <article>
+
+                    <p><cite>edX</cite> - <a href="https://www.edx.org/" target="_blank">www.edX.org</a></p>
+                </article>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+
+
+</html>
