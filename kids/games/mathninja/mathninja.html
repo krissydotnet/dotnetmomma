@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Math Practice</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Permanent+Marker" rel="stylesheet">
+    <style>
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            /* display: none; <- Crashes Chrome on hover */
+            -webkit-appearance: none;
+            margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+        }
+        body {
+            margin: 0;
+            overflow-x: hidden;
+        }
+        header {
+            display: flex;
+            width: 100%;
+        }
+        header h1 {
+            font-family: 'Permanent Marker', cursive;
+            font-size: 35px;
+        }
+        .header-left {
+            width: 50%;
+            display: flex;
+        }
+        .header-left img {
+            height: 75px;
+            
+        }
+        .header-right {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            padding-right: 50px;
+        }
+        .label {
+            width: 100px;
+            font-family: 'Oswald', sans-serif;
+            padding-bottom: 10px;
+            
+            
+        }
+        .field {
+            width: 150px;
+            font-family: 'Oswald', sans-serif;
+            padding-bottom: 10px;
+            font-weight: bolder;
+        }
+        .level-container {
+            display: flex;
+            justify-content:flex-end;
+        }
+        .belt-container {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .belt {
+            width: 150px;
+            height: 25px;
+            border: 2px solid black;
+        }
+        .flash-card-container {
+            grid-area: card;
+        }
+    #flash-card {
+        padding: 15px;
+        width: 200px;
+        height: 350px;
+        background-color: grey;
+        border-radius: 15px;
+        margin: auto;
+        text-align: center;
+        display: grid;
+        grid-template-areas: "operand number1"
+                             "operand number2"
+                             "equals equals"
+                             "answer answer";
+        align-items: end;
+    }
+    #operator {
+        grid-area: operand;
+        
+    }
+    #number1 {
+        grid-area: number1;
+    }
+    #number2 {
+        grid-area: number2;
+    }
+    #equals {
+        grid-area: equals;
+    }
+    #answer {
+        justify-self: end;
+        grid-area: answer;
+        font-size: 30px;
+        height: 75px;
+        width: 80%;
+        text-align: center;
+    }
+    #right {
+        width: 100px;
+        height: 0px;
+        background-color: green;
+    }
+    #wrong {
+        width: 100px;
+        height: 0px;
+        background-color: red;
+    }
+    .vertical {
+        border-bottom: 1px solid black;
+    }
+    #main-container {
+        display: grid;
+        grid-template-areas: "card score";
+        grid-template-columns: 4fr 1fr;
+    }
+    .score-container {
+        grid-area: score;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        font-family: 'Oswald', sans-serif;
+        justify-content: center;
+    }
+
+    .score-container img {
+        height: 50px;
+
+    }
+    .animate {
+        position: relative;
+        animation-name: jump;
+        animation-duration: .75s;
+        animation-iteration-count: 2;
+    }
+
+    @keyframes jump {
+        0% {
+                top: 0px;
+                left: 0px;
+            }
+            50% {
+                top: -10px;
+                left: 0px;
+            }
+            100% {
+                top: 0px;
+                left: 0px;
+            }
+}
+#new-belt {
+    opacity: 0;
+    padding: 15px;
+    width: 300px;
+}
+#new-level {
+    opacity: 0;
+    padding: 15px;
+    width: 300px;
+}
+.move-left {
+    position: fixed;
+    top: 50vh;
+    animation-name: move-left;
+    animation-duration: 4s;
+    opacity: 0;
+}
+@keyframes move-left {
+        0% {
+                left: 100vw;
+                opacity: 1;
+            }
+        50% {
+            left: 50vw;
+            opacity: 1;
+        }
+        100% {
+                left: -300px;
+                opacity: 0;
+            }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-left"><img src="./images/cute-ninja-clipart-1.jpg" alt="Ninja"><h1>Math Ninja</h1></div>
+        <div class="header-right">
+            <div class="level-container">
+                <div class="label">Level: </div>
+                <div class="field">
+                    <div class="level" id="level"></div>
+                </div>
+            </div>
+           <div class="belt-container">
+               <div class="label">Current Belt: </div>
+               <div class="field">
+                    <div class="belt" id="belt"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+<main>
+<div id="main-container">
+    <div class="flash-card-container">
+        <div  id="flash-card">
+        <h1 id="number1">1</h1>
+        <h1 id="operator">+</h1>
+        <h1 id="number2">1</h1>
+        <div id="equals" class="vertical"></div>
+        <input type="number" id="answer">
+
+        </div>
+</div>
+<div class="score-container">
+    <div class="right-container" >
+        <img src="./images/purple-elephant-md.png" id="elephant" alt="Purple Elephant" >
+    <h2>Right</h2>
+    <div id="right"></div>
+</div>
+<div class="wrong-container">
+    <img src="./images/Secret_Agent_PSA_Postcard.png" id="agent" alt="Spy">
+    <h2>Wrong</h2>
+    <div id="wrong"></div>
+</div>
+</div>
+<div id="new-belt">
+    <h2>Congratulations</h2>
+    <h3>Your received a new belt!!!</h3>
+</div>
+</div>
+<div id="new-level">
+        <h2>Congratulations</h2>
+        <h3>You leveled up!!!</h3>
+    </div>
+    </div>
+</main>
+<footer>
+    <button type="button" onclick="resetUserData()">Reset User</button>
+</footer>
+        <script src="./scripts/mathscript.js"></script>
+</body>
+</html>
