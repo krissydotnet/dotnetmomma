@@ -33,6 +33,7 @@
                 <li><a href="#loops" class="nav-link">Loops</a></li>
                 <li><a href="#functions" class="nav-link">Functions</a></li>
                 <li><a href="#objects" class="nav-link">Objects</a></li>
+                <li><a href="#regular_expressions" class="nav-link">Regular Expressions</a></li>
                 <li><a href="#references" class="nav-link">References</a></li>
             </ul>
         </nav>
@@ -1117,6 +1118,128 @@ if (pets[1].hasOwnProperty("favorite thing")) {
 
                                                 </article>
                                             </section>
+                                            <section class="main-section" id="regular_expressions">
+                                                    <header><span class="fas fa-check"></span>Regular Expressions</header>
+                                                    <article>
+
+                                                        <h2>Methods</h2>
+                                                        <table class="section-table">
+                                                                <thead>
+                                                                    <tr>
+        
+                                                                <th>Description</th>
+                                                                <th>Syntax</td>
+                                                      
+            
+                                                                </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                <tr>
+                                                                    <td>Test if Match Exists</td>
+                                                                  
+                                                                    
+                                                                    <td>
+                                                                            let testStr = "This is a string.";<br>
+                                                                            let testRegex = /this/i;<br>
+                                                                            testRegex.test(testStr);
+
+                                                                    </td>
+                                                                   
+                                                                    
+                                                                </tr>
+                                                                <tr>
+                                                                        <td>Extract Match</td>
+                                                                      
+                                                                        
+                                                                        <td>
+                                                                                let testStr = "This is a string.  How is it going.";
+                                                                                let testRegex = /is/;
+                                                                                testStr.match(testRegex);
+                                                                        </td>
+                                                                       
+                                                                        
+                                                                    </tr>
+                                                                    <tr>
+                                                                            <td>Extract All Matches</td>
+                                                                          
+                                                                            
+                                                                            <td>
+                                                                                    let testStr = "This is a string.  How is it going.";
+                                                                                    let testRegex = /is/g;
+                                                                                    testStr.match(testRegex);
+                                                                            </td>
+                                                                           
+                                                                            
+                                                                        </tr>
+
+                                                            </tbody>
+                                                            </table>
+                                                            <h2>Regular Expressions</h2> 
+                                                        <table class="section-table">
+                                                                <thead>
+                                                                    <tr>
+        
+                                                                <th>Description</th>
+                                                                <th>Syntax</td>
+                                                      
+            
+                                                                </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                <tr>
+                                                                    <td>Test Literal Strings</td>
+                                                                  
+                                                                    
+                                                                    <td>
+                                                                            let testStr = "This is a string.";<br>
+                                                                            let testRegex = /string/;<br>
+                                                                            testRegex.test(testStr);
+                                                                    </td>
+                                                                   
+                                                                    
+                                                                </tr>
+                                                                <tr>
+                                                                        <td>Test Literal Strings for Multiple Literals</td>
+                                                                      
+                                                                        
+                                                                        <td>
+                                                                                let testStr = "This is a string.";<br>
+                                                                                let testRegex = /This|a|string/;<br>
+                                                                                testRegex.test(testStr);
+                                                                        </td>
+                                                                       
+                                                                        
+                                                                    </tr>
+                                                                    <tr>
+                                                                            <td>Ignore Case</td>
+                                                                          
+                                                                            
+                                                                            <td>
+                                                                                    let testStr = "This is a string.";<br>
+                                                                                    let testRegex = /this/i;<br>
+                                                                                    testRegex.test(testStr);
+                                                                            }
+                                                                            </td>
+                                                                           
+                                                                            
+                                                                        </tr>
+                                                                        <tr>
+                                                                                <td>Wildcard</td>
+                                                                              
+                                                                                
+                                                                                <td>
+                                                                                        let testStr = "This is his string.";<br>
+                                                                                        let testRegex = /.is/i;<br>
+                                                                                        testRegex.test(testStr);
+                                                                                }
+                                                                                </td>
+                                                                               
+                                                                                
+                                                                            </tr>
+                                                            </tbody>
+                                                            </table>
+                                                    </article>
+                                                </section>
             <section class="main-section" id="references">
                 <header><span class="fas fa-book-open"></span>References</header>
                 <article>
