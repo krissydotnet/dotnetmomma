@@ -21,7 +21,8 @@ const BELTS = [
 const LEVEL = [
     "Beginner",
     "Novice",
-    "Intermediate"
+    "Intermediate",
+    "Expert"
 ];
 const dojo = [
     {level: LEVEL[0],
@@ -43,6 +44,13 @@ const dojo = [
        min: 10,
        max: 20,
        operators: ["+"] 
+    },
+    {
+        level: LEVEL[3],
+        belt: BELTS,
+       min: 10,
+       max: 20,
+       operators: ["-"] 
     }
 ];
 const blankuser = new User("guest");
@@ -193,7 +201,7 @@ document.body.onkeyup = function(e){
         if ((answer!="") && (answer == correctAnswer())) {
             score++;
            // if (score === 10) {
-               if (score === 5) {
+               if (score === 15) {
                 if (dojo[level].belt.length === belt + 1) {
                     changeLevel();
                 } else {
