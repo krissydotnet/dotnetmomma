@@ -132,13 +132,22 @@ header {
     width: 100%;
     padding-bottom: 100px;
     background-color:#e6ffff;
-    height: 500px;
+    height: 100vh;
 }
 .menu-items {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
+
+.menu-items a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+  
+}
+
 .item-box {
     display: flex;
     box-shadow: 3px 3px grey;
@@ -154,12 +163,7 @@ header {
    
     
 }
-.menu-items a {
-    display: flex;
-    color: white;
-    text-decoration: none;
-  
-}
+
 .item-box a:visited {
     color: white;
 }
