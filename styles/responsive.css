@@ -30,20 +30,33 @@
 /* For Smartphones */
 @media all and (max-width: 670px) {
     header {
-        height: 20px;
+        /* height: 20px;     */
     }
     .header-logo {
         font-size: 12px; 
     }
-    .menu-icon {
-        display: block;
-        padding-right: 30px;
 
+    .navbar, .navbar-items {
+        flex-direction: column;
     }
-    .header-nav {
+    .navbar-items {
         display: none;
+        margin-left: 0px;
     }
-
+    .nav-bar-links {
+        line-height: 20px;
+    }
+    .navbar-toggleshow {
+        display: flex;
+        float: left;
+        
+    }
+    .navbar-toggle {
+        align-self: flex-end;
+        display: initial;
+        position: absolute;
+        cursor: pointer;
+    }
     .banner-wrapper {
         padding-top: 15px;
         height: 125px;
