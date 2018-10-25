@@ -33,7 +33,7 @@
         /* height: 20px;     */
     }
     .header-logo {
-        font-size: 12px; 
+        font-size: 20px; 
     }
 
     .navbar, .navbar-items {
@@ -52,6 +52,7 @@
         
     }
     .navbar-toggle {
+        font-size: 20px;
         align-self: flex-end;
         display: initial;
         position: absolute;
